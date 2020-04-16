@@ -18,7 +18,15 @@ Przykładowe repozytorium dla zajęć z Tworzenia WWW
   - 5 opcji wyboru kandydata (jednokrotnego wyboru)
   
  #### Zadanie domowe
-Do wykonania przed 14:10 03.02.2020r:
+Do wykonania przed 14:10 03.02.2020r.:
  - Uzupełnij plik html o metadane zawierające twoje imię i nazwisko
  - Zaimplementuj responsywność oraz czytelność strony (przyjżyj się klasie ```container``` biblioteki Bootstrap)
  
+ ####
+Do wykonania przed 23.04.2020r.:
+ - Ukończ szkielet formularza
+ - Za pomocą Bootstrapa dodaj alerty, (np. czerwony oraz zielony) informujące o (nie)powodzeniu wysłania/wypełnienia formularza.
+
+ ####
+Do wykonania przed 30.04.2020r.:
+ - Zaimplementuj funkcje PHP weryfikujące poprawność wypełnienia formularza.
