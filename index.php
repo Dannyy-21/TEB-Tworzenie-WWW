@@ -17,6 +17,15 @@
     <div class="container">
 	<form>
 		<h1>Głosowanie na przewodniczącego szkoły</h1>
+        <?php
+            if ($_GET) {
+                if ($_GET["Voter"]) {
+                    echo '<div class="alert alert-success" role="alert">Głos przesłany!</div>';
+                } else {
+                    echo '<div class="alert alert-danger" role="alert">Brak identyfikatora!</div>';
+                }
+            }
+        ?>
         <div class="form-group">
             <div class="form-group-row">
                 <label for="Voter">ID</label>
@@ -24,11 +33,11 @@
             </div>
             <div class="form-group-row">
                 <label for="Adam">Adam</label>
-                <input type="radio" name="Adam" id="Adam" value="Adam">
+                <input type="radio" name="Vote" id="Adam" value="Adam">
             </div>
             <div class="form-group-row">
                 <label for="Ewa">Ewa</label>
-                <input type="radio" name="Ewa" id="Ewa" value="Ewa">
+                <input type="radio" name="Vote" id="Ewa" value="Ewa">
             </div>
             <button type="submit" class="btn btn-primary">Głosuj</button>
         </div>
