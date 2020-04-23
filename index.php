@@ -19,12 +19,20 @@
 		<h1>Głosowanie na przewodniczącego szkoły</h1>
         <?php
             if ($_GET) {
-                if ($_GET["Voter"]) {
-                    echo '<div class="alert alert-success" role="alert">Głos przesłany!</div>';
-                } else {
-                    echo '<div class="alert alert-danger" role="alert">Brak identyfikatora!</div>';
+                $error_message = "";
+                if (!$_GET["Voter"]) {
+                    $error_message = $error_message.'Brak identyfikatora! ';
+                } 
+                if (!$_GET["Vote"]) {
+                    $error_message = $error_message.'Brak głosu!';
                 }
-            }
+
+                if ($error_message) {
+                    echo '<div class="alert alert-danger" role="alert">'.$error_message.'</div>';
+                } else {
+                    echo '<div class="alert alert-success" role="alert">Głos przesłany na '.$_GET["Vote"].'!</div>';
+                }   
+             }
         ?>
         <div class="form-group">
             <div class="form-group-row">
