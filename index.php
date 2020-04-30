@@ -22,16 +22,16 @@
                 $error_message = "";
                 if (!$_GET["Voter"]) {
                     $error_message = $error_message.'Brak identyfikatora! ';
-                } 
+                }
                 if (!$_GET["Vote"]) {
                     $error_message = $error_message.'Brak głosu!';
                 }
 
-                if ($error_message) {
+                if ($error_message != "") {
                     echo '<div class="alert alert-danger" role="alert">'.$error_message.'</div>';
                 } else {
                     echo '<div class="alert alert-success" role="alert">Głos przesłany na '.$_GET["Vote"].'!</div>';
-                }   
+                }
              }
         ?>
         <div class="form-group">

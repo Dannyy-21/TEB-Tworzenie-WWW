@@ -29,4 +29,7 @@ Do wykonania przed 23.04.2020r.:
 
  ####
 Do wykonania przed 30.04.2020r.:
- - Zaimplementuj funkcje PHP weryfikujące poprawność wypełnienia formularza.
+ - Zaimplementuj funkcje PHP weryfikujące poprawność wypełnienia formularza:
+    - Identyfikator głosującego musi być podany
+      - Identyfikator składa się z 6 cyfr i jest podzielny przez 7 (przyjżyj się funkcjom is_numeric() oraz strlen()).
+    - Głos musi być oddany
