@@ -22,15 +22,28 @@
                 $error_message = "";
                 if (!$_GET["Voter"]) {
                     $error_message = $error_message.'Brak identyfikatora! ';
+                } else {
+                    if (is_numeric($_GET["Voter"])) {
+                        if (strlen($_GET["Voter"]) == 6) {
+                            if ($_GET["Voter"] % 7) {
+                                $error_message = $error_message.'Błędny identyfikator! ';
+                            }
+                        } else {
+                            $error_message = $error_message.'Identyfikator ma złą długosć! ';
+                        }
+                    } else {
+                        $error_message = $error_message.'Identyfikator nie jest nuemryczny! ';
+                    }
                 }
+
                 if (!$_GET["Vote"]) {
                     $error_message = $error_message.'Brak głosu!';
-                }
+                }               
 
                 if ($error_message != "") {
                     echo '<div class="alert alert-danger" role="alert">'.$error_message.'</div>';
                 } else {
-                    echo '<div class="alert alert-success" role="alert">Głos przesłany na '.$_GET["Vote"].'!</div>';
+                   echo '<div class="alert alert-success" role="alert">Głos przesłany na '.$_GET["Vote"].'!</div>';
                 }
              }
         ?>
